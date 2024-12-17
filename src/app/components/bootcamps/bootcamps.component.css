@@ -1,0 +1,27 @@
+
+section{
+    justify-self: center;
+    background-color: #f1f9fa;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 4px #b2b2b2;
+}
+
+section img{
+    width: 100%;
+    height: 150px;
+    margin: 0;
+}
+
+section .card{
+    border-radius: 4px;
+}
+
+section .row{
+    display: flex;
+    gap: 20px;
+}
+
+section p{
+    font-size: 13px;
+}

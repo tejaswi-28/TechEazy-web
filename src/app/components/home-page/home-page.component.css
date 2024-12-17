@@ -1,0 +1,137 @@
+.carousel{
+    box-shadow: 0 0 5px #888888;
+}
+.carousel-item img {
+    opacity: 0.9;
+}
+
+.carousel-caption h4 {
+    width: 50%;
+    padding: 5px 0;
+    justify-self: center;
+    border-radius: 4px;
+}
+
+.row {
+    gap: 40px;
+    color: #fff;
+}
+
+.upcoming-cards {
+    box-shadow: 0 0 5px #888888;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.box-1 {
+    background-image: url('../../../assets/images/spring.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.box-2 {
+    background-image: url('../../../assets/images/aws.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+section .row {
+    margin-right: 0px;
+}
+
+.card {
+    flex: 0 50%;
+    background: #effcff;
+    box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2), 0 5px 15px 0 rgba(37, 44, 97, 0.15);
+    border-radius: 15px;
+    margin: 8px;
+    padding: 25px 15px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    overflow: hidden;
+    min-height: 180px;
+    transition: 0.7s;
+}
+
+.card:before {
+    content: "";
+    position: absolute;
+    background: rgb(85 108 214 / 5%);
+    width: 170px;
+    height: 400px;
+    z-index: -1;
+    transform: rotate(42deg);
+    right: -56px;
+    top: -23px;
+    border-radius: 35px;
+}
+
+.card:hover {
+    background: #309df0;
+    color: #fff;
+    transform: scale(1.1);
+    z-index: 9;
+}
+
+.card:hover::before {
+    background: rgb(85 108 214 / 10%);
+}
+
+.hover_color_bubble {
+    position: absolute;
+    background: rgb(54 81 207 / 15%);
+    width: 100rem;
+    height: 100rem;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    top: 16rem;
+    border-radius: 50%;
+    transform: rotate(-36deg);
+    left: -18rem;
+    transition: 0.7s;
+}
+  
+.card:hover .hover_color_bubble {
+    top: 0rem;
+}
+
+.card:hover .btn {
+    background: #fff !important;
+    color: #309df0;
+    font-weight: bold;
+}
+
+.card-title hr {
+    margin-bottom: -5px;
+}
+
+.home-metrics {
+    background: linear-gradient(4deg, black , #0d6efd, whitesmoke);
+}
+
+.explore-box{
+    position: relative;
+    padding: 4rem 0;
+}
+
+.explore-box img{
+    width: 100%;
+}
+
+.explore-box button {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+@media only screen and (min-width: 768px) {
+    .cards-box {
+      flex: 1;
+    }
+}

@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+h6{
+    background-color: #000;
+    width: fit-content;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.card{
+    transition: all 0.5s ease;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 2px 5px rgb(0, 115, 255);
+}
