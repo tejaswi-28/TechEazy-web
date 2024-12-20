@@ -14,9 +14,17 @@
                       Courses
                     </a>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="#">Java</a></li>
-                      <li><a class="dropdown-item" href="#">Python</a></li>
-                      <li><a class="dropdown-item" href="#">AWS Cloud</a></li>
+                      <li *ngFor="let classItem of classList">
+                        <a class="dropdown-item" 
+                           [routerLink]="['/class-detail', classItem.classId]"
+                           [queryParams]="{
+                             name: classItem.className, 
+                             date: classItem.createDate, 
+                             tenant: classItem.tenantId
+                           }">
+                           {{ classItem.className }}
+                        </a>
+                      </li>
                     </ul>
                   </li>
                 <li class="nav-item me-3">
@@ -29,7 +37,7 @@
                     <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Student Corner</a>
                     <ul class="dropdown-menu">
                         <li>
-                            <a  class="dropdown-item" href="">Login</a>
+                            <a  class="dropdown-item" href="http://localhost:4201/">Login</a>
                         </li>
                     </ul>
                 </li>

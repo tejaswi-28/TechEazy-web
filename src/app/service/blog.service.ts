@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class BlogService {
 
-  private apiUrl = 'https://blog.techeazyconsulting.com/'; // Your blog API URL
+  private apiUrl = 'https://blog.techeazyconsulting.com/';
 
   constructor(private http: HttpClient) {}
 

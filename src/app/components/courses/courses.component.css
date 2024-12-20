@@ -25,6 +25,13 @@ form h3{
     color: black;
 }
 
+.course-banner{
+    background: url('../../../assets/images/course-banner.png');
+    background-size: cover;
+    background-position: initial;
+    background-repeat: no-repeat;
+}
+
 .card.rounded-circle{
     background: linear-gradient(to top, rgb(0, 157, 255),aliceblue, white);
 }

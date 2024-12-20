@@ -23,6 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/techeazy-website-ang/",
             "outputPath": "dist/project",
             "index": "src/index.html",
             "browser": "src/main.ts",
