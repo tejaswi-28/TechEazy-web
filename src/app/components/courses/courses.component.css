@@ -1,5 +1,5 @@
 .banner {
-    background-image: url('../../../assets/images/course-bg2.png');
+    background-image: url('assets/images/course-bg2.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -26,7 +26,7 @@ form h3{
 }
 
 .course-banner{
-    background: url('../../../assets/images/course-banner.png');
+    background: url('assets/images/course-banner.png');
     background-size: cover;
     background-position: initial;
     background-repeat: no-repeat;
@@ -50,14 +50,14 @@ form h3{
 }
 
 .info-cards{
-    background: url('../../../assets/images/course-box.png');
+    background: url('assets/images/course-box.png');
     background-size: cover;
     background-position: initial;
     background-repeat: no-repeat;
 }
 
 .quiz-container{
-    background: url('../../../assets/images/quiz-banner.png');
+    background: url('assets/images/quiz-banner.png');
     background-size: cover;
     background-position: initial;
     background-repeat: no-repeat;
