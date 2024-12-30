@@ -83,3 +83,16 @@ ul li a:hover{
 .copyright{
     background-color: #181818;
 }
+
+@media (max-width: 1440px) {
+    .cols{
+        width: 12%;
+    }
+
+    h6{
+        font-size: 14px;
+    }
+    .cols p, p, ul li a{
+        font-size: 10px;
+    }
+}
