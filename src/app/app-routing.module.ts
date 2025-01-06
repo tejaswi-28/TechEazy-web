@@ -6,7 +6,8 @@ import { BootcampsPageComponent } from './components/bootcamps-page/bootcamps-pa
 import { CoursesComponent } from './components/courses/courses.component';
 
 const routes: Routes = [
-  { path:'', component: HomePageComponent },
+  { path: '', redirectTo:'/home', pathMatch:'full' },
+  { path:'home', component: HomePageComponent },
   { path:'blogs', component: BlogsComponent },
   { path:'bootcamps', component: BootcampsPageComponent },
   { path: 'class-detail/:id', component: CoursesComponent },

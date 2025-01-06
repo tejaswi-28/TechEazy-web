@@ -52,17 +52,11 @@
 <div class="course-banner container mt-5 p-4 text-center">
   <h3>{{ className }}</h3>
   <br>
-  <p>{{ classId }}</p>
-  <p>{{ createDate }}</p>
-  <p>{{ tenantId }}</p>
-  <p>{{ tenantId }}</p>
-  <p>{{ tenantId }}</p>
-  <p>{{ tenantId }}</p>
-  <p>{{ tenantId }}</p>
+  <p>{{ classDescription }}</p>
 </div>
 
 <div class="container py-4 mt-3">
-    <h2 class="text-center mb-5">Tailored Learning Experience Just for You"</h2>
+    <h2 class="text-center mb-5">"Tailored Learning Experience Just for You"</h2>
     <div class="row text-center">
       <div class="col-md-4 mb-5">
         <div class="card rounded-circle shadow p-5">
@@ -106,17 +100,27 @@
 <div class="container bg-aqua p-4">
     <h2 class="text-center mb-5">Course Highlights</h2>
     <div class="accordion accordion-flush" id="accordionFlushExample">
-        <div class="accordion-item">
+        <div class="accordion-item" *ngFor="let subject of subjects; let i = index">
           <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              Sub-topic 1
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"  [attr.data-bs-target]="'#flush-collapse' + i" aria-expanded="false" [attr.aria-controls]="'flush-collapse' + i" (click)="onSubjectClick(subject.subjectId)">
+              {{subject.subjectName}}
             </button>
           </h2>
-          <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+          <div [id]="'flush-collapse'+i" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">{{subject.subjectDescription}} <br>
+              <div class="chapters">
+                <!-- <ul *ngFor="let chapter of chapters">
+                  <li>{{chapter.chapterName}}</li>
+                </ul> -->
+                <div *ngFor="let chapter of chapters">
+                  <h3>{{ chapter.chapterName }}</h3>
+                  <p>{{ chapter.chapterDescription }}</p>
+                </div>                
+              </div>
+            </div>
           </div>
         </div>
-        <div class="accordion-item">
+        <!-- <div class="accordion-item">
           <h2 class="accordion-header">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
               Sub-topic 2
@@ -135,8 +139,8 @@
           <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
           </div>
-        </div>
-      </div>
+        </div> -->
+    </div>
 </div>
 
 <div class="container mt-5">

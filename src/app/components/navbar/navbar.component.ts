@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../service/auth.service';
-import { error } from 'console';
 import { Router } from '@angular/router';
-import { Certificate } from 'crypto';
 
 @Component({
   selector: 'app-navbar',
@@ -30,13 +28,18 @@ export class NavbarComponent implements OnInit{
   }
 
   goToCourses(classItem: any): void{
-    this.router.navigate(['/courses', classItem.classId], {
-      queryParams: {
-        className: classItem.className,
-        createDate: classItem.createDate,
-        tenantId: classItem.tenantId
-      }
-    })
+    this.router.navigate(['/class-detail', classItem.id])
   }
+  
+  // goToCourses(classItem: any): void{
+  //   this.router.navigate(['/class-detail', classItem.id], {
+  //     queryParams: {
+  //       className: classItem.className,
+  //       classDescription: classItem.classDescription,
+  //       createDate: classItem.createDate,
+  //       tenantId: classItem.tenantId
+  //     }
+  //   })
+  // }
 }
 // Profile, Communication, Classes, Quiz, Results, Certificate

@@ -1,8 +1,11 @@
-.carousel{
+.carousel {
     box-shadow: 0 0 5px #888888;
 }
+
 .carousel-item img {
     opacity: 0.9;
+    width: 100%;  /* Ensures images are responsive */
+    height: auto; /* Maintains the aspect ratio */
 }
 
 .carousel-caption h4 {
@@ -10,6 +13,7 @@
     padding: 5px 0;
     justify-self: center;
     border-radius: 4px;
+    text-align: center;
 }
 
 .row {
@@ -23,33 +27,24 @@
     border-radius: 4px;
 }
 
-.box-1 {
-    background-image: url('../../../assets/images/spring.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-
-.box-2 {
-    background-image: url('../../../assets/images/aws.jpg');
+.box-1, .box-2 {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
 
 section .row {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .card {
     flex: 0 50%;
     background: #effcff;
-    box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2), 0 5px 15px 0 rgba(37, 44, 97, 0.15);
+    box-shadow: 0 2px 4px rgba(136, 144, 195, 0.2), 0 5px 15px rgba(37, 44, 97, 0.15);
     border-radius: 15px;
     margin: 8px;
-    padding: 25px 15px;
+    padding: 20px;
     position: relative;
-    z-index: 1;
     text-align: center;
     overflow: hidden;
     min-height: 180px;
@@ -59,7 +54,7 @@ section .row {
 .card:before {
     content: "";
     position: absolute;
-    background: rgb(85 108 214 / 5%);
+    background: rgba(85, 108, 214, 0.05);
     width: 170px;
     height: 400px;
     z-index: -1;
@@ -77,32 +72,23 @@ section .row {
 }
 
 .card:hover::before {
-    background: rgb(85 108 214 / 10%);
+    background: rgba(85, 108, 214, 0.1);
 }
 
 .hover_color_bubble {
     position: absolute;
-    background: rgb(54 81 207 / 15%);
+    background: rgba(54, 81, 207, 0.15);
     width: 100rem;
     height: 100rem;
-    left: 0;
-    right: 0;
+    left: -18rem;
     z-index: -1;
     top: 16rem;
     border-radius: 50%;
-    transform: rotate(-36deg);
-    left: -18rem;
     transition: 0.7s;
 }
-  
-.card:hover .hover_color_bubble {
-    top: 0rem;
-}
 
-.card:hover .btn {
-    background: #fff !important;
-    color: #309df0;
-    font-weight: bold;
+.card:hover .hover_color_bubble {
+    top: 0;
 }
 
 .card-title hr {
@@ -110,15 +96,15 @@ section .row {
 }
 
 .home-metrics {
-    background: linear-gradient(4deg, black , #0d6efd, whitesmoke);
+    background: linear-gradient(4deg, black, #0d6efd, whitesmoke);
 }
 
-.explore-box{
+.explore-box {
     position: relative;
     padding: 4rem 0;
 }
 
-.explore-box img{
+.explore-box img {
     width: 100%;
 }
 
@@ -130,104 +116,19 @@ section .row {
     z-index: 1;
 }
 
-@media (max-width: 1440px) {
-    h2 {
-        font-size: 2px;
-    }
-    h4 {
-        font-size: 20px;
-    }
-    section .card-body .card-title {
-        font-size: 6px;
-    }
-    p {
-        font-size: 15px;
-    }
-    section p {
-        font-size: 12px;
-    }
-
-    section {
-        padding: 20px;
-    }
-}
-
-@media only screen and (min-width: 768px) {
-    .cards-box {
-      flex: 1;
-    }
-}
-
-/* For extra small devices (portrait phones, less than 576px) */
-@media (max-width: 575.98px) {
-    .carousel-caption h4 {
-        font-size: 14px;
-        width: 80%;
-    }
-
-    .card {
-        margin: 8px auto;
-        padding: 15px 10px;
-    }
-
-    .home-metrics h2 {
-        font-size: 24px;
-    }
-
-    .home-metrics p {
-        font-size: 12px;
-    }
-
-    .explore-box button {
-        left: 50%;
-        font-size: 12px;
-    }
-}
-
-/* For small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) and (max-width: 767.98px) {
-    .container {
-        max-width: 650px;
-    }
-
-    .carousel-caption h4 {
-        font-size: 16px;
-        width: 70%;
-    }
-
-    .card {
-        margin: 8px auto;
-        padding: 20px 12px;
-    }
-
-    .home-metrics h2 {
-        font-size: 28px;
-    }
-
-    .home-metrics p {
-        font-size: 14px;
-    }
-
-    .explore-box button {
-        left: 45%;
-        font-size: 14px;
-    }
-}
-
-/* For medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px) {
+@media (max-width: 1200px) {
     .carousel-caption h4 {
         font-size: 18px;
         width: 60%;
     }
 
     .card {
-        margin: 10px auto;
-        padding: 25px 15px;
+        margin: 10px;
+        padding: 25px;
     }
 
     .home-metrics h2 {
-        font-size: 32px;
+        font-size: 36px;
     }
 
     .home-metrics p {
@@ -240,54 +141,77 @@ section .row {
     }
 }
 
-/* For large devices (desktops, 992px and up) */
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (max-width: 991.98px) {
     .carousel-caption h4 {
-        font-size: 20px;
-        width: 50%;
+        font-size: 16px;
+        width: 70%;
     }
 
     .card {
-        margin: 15px;
-        padding: 30px 20px;
+        margin: 10px;
+        padding: 20px;
     }
 
     .home-metrics h2 {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .home-metrics p {
-        font-size: 18px;
+        font-size: 14px;
     }
 
     .explore-box button {
-        left: 38%;
-        font-size: 18px;
+        left: 42%;
+        font-size: 14px;
     }
 }
 
-/* For extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
+@media (max-width: 767.98px) {
     .carousel-caption h4 {
-        font-size: 24px;
-        width: 40%;
+        font-size: 14px;
+        width: 80%;
     }
 
     .card {
-        margin: 20px;
-        padding: 35px 25px;
+        margin: 8px auto;
+        padding: 15px;
     }
 
     .home-metrics h2 {
-        font-size: 40px;
+        font-size: 28px;
     }
 
     .home-metrics p {
-        font-size: 20px;
+        font-size: 12px;
     }
 
     .explore-box button {
-        left: 35%;
-        font-size: 20px;
+        left: 50%;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .carousel-caption h4 {
+        font-size: 12px;
+        width: 90%;
+    }
+
+    .card {
+        margin: 5px auto;
+        padding: 10px;
+    }
+
+    .home-metrics h2 {
+        font-size: 24px;
+    }
+
+    .home-metrics p {
+        font-size: 10px;
+    }
+
+    .explore-box button {
+        left: 50%;
+        font-size: 10px;
     }
 }

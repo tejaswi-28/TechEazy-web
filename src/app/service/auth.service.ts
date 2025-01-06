@@ -7,17 +7,28 @@ import { Observable } from 'rxjs';
 })
 export class AuthService {
 
-  private apiUrl = 'https://api.techeazyconsulting.com/dms/api/classes';
-  private token =
-    'Bearer eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiI0Iiwic3ViIjoiZ2Fpa3dhZHRlamFzd2kwMkBnbWFpbC5jb20iLCJpYXQiOjE3MzQ1MDAzNzMsImV4cCI6MTczNDUwMzk3M30._rSWdTm_3ZV_ZEjtMi5Qw97f3BLz_88uYPFiK4MIjz4';
+  // private apiUrl = 'https://api.techeazyconsulting.com/dms/api';
+  private apiUrl = 'http://localhost:8080/dms/api';
 
   constructor(private http: HttpClient) {}
 
   getClasses(): Observable<any> {
-    const headers = new HttpHeaders({
-      Authorization: this.token,
-      'Content-Type': 'application/json',
-    });
-    return this.http.get<any>(this.apiUrl, { headers });
+    return this.http.get<any>(`${this.apiUrl}/classes`);
   }
+
+  getClassDetails(id: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/classes/${id}`);
+  }
+
+  getSubjectsByClass(classId: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/subjects/by-class/${classId}`);
+  }
+
+  getChaptersByClassAndSubject(classId: string, subjectId: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/chapters/by-class&Subject/${classId}/${subjectId}`);
+  }
+
+  // getClasses(): Observable<any> {
+  //   return this.http.get<any>(`${this.apiUrl}/classes`);
+  // }
 }
