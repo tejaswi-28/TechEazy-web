@@ -192,11 +192,20 @@ section .row {
 }
 
 @media (max-width: 575.98px) {
-    .carousel-caption h4 {
-        font-size: 12px;
-        width: 90%;
+    .carousel-caption{
+        height: 100px;
+        margin: 0;
     }
 
+    .carousel-caption h6 {
+        font-size: 12px;
+        width: 90%;
+        margin: 0;
+    }
+
+    .carousel-caption p{
+        font-size: 10px;
+    }
     .card {
         margin: 5px auto;
         padding: 10px;
