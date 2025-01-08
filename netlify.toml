@@ -1,4 +1,4 @@
 [build]
 command = "ng build"
 functions = "netlify/functions"
-publish = dist/techeazy-web/browser"
+publish = "dist/techeazy-web/browser"
