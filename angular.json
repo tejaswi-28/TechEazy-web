@@ -24,7 +24,7 @@
           "builder": "@angular-devkit/build-angular:application",
           "options": {
             "baseHref": "",
-            "outputPath": "docs",
+            "outputPath": "dist/techeazy-web",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
